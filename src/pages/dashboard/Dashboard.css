@@ -55,3 +55,13 @@ p {
     font-size: 0.8em;
     margin-top: 5px;
   }
+  @media (max-width: 768px) {
+    #h1{
+      text-align: center;
+      font-size: 5pc;
+      font-weight: 800;
+      color: var(--ter);
+      font-family: "Danfo", serif;
+  
+  }
+  }
