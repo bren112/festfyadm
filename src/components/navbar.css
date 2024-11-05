@@ -16,8 +16,8 @@ body {
 #logo {
   color: var(--ter);
   font-size: 3pc;
-  font-family: "Jolly Lodger", system-ui;
-  letter-spacing: 0.2pc;
+  font-family:Lilita One, sans-serif;
+  
 }
 
 .logo {

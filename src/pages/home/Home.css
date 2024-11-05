@@ -1,0 +1,35 @@
+#Home{
+    background-color: black;
+    height: 200pc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+#imgHome{
+    width: 50pc;
+    margin-top: 2pc;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin-top: 7pc;
+}
+.btn button{
+    width: 19pc;
+    height: 4pc;
+    background-color: black;
+    border: solid white 1px;
+    color: white;
+    font-family: "Danfo", serif;
+    font-size: 2pc;
+}
+@media (max-width: 768px) {
+    #imgHome{
+        width: 25pc;
+        margin-top: 9pc;
+    }
+    
+}

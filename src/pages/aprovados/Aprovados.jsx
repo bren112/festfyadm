@@ -89,7 +89,7 @@ const Aprovados = () => {
 
   return (
     <div className="table-container">
-      <h1>Aprovados</h1>
+      <h1 id='title'>Aprovados</h1>
       <input
         type="text"
         value={search}
@@ -101,7 +101,7 @@ const Aprovados = () => {
       <table className="table" ref={tableRef}>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Número</th>
             <th>Nome</th>
             <th>Sobrenome</th>
             <th>Telefone</th>
@@ -111,13 +111,13 @@ const Aprovados = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredAprovados.map(aprovado => (
+          {filteredAprovados.map((aprovado, index) => (
             <tr
               key={aprovado.id}
               data-id={aprovado.id}
               className={aprovado.id === highlightedId ? 'highlighted' : ''}
             >
-              <td>{aprovado.id}</td>
+              <td>{index + 1}</td> {/* Exibe o número da linha */}
               <td>{aprovado.nome}</td>
               <td>{aprovado.sobrenome}</td>
               <td>{aprovado.telefone}</td>
@@ -146,9 +146,9 @@ const Aprovados = () => {
 
       {/* Cartões para telas pequenas */}
       <div className="card-container">
-        {filteredAprovados.map(aprovado => (
+        {filteredAprovados.map((aprovado, index) => (
           <div className="card" key={aprovado.id}>
-            <h2>ID: {aprovado.id}</h2>
+            <h2>Número: {index + 1}</h2> {/* Exibe o número da linha */}
             <p><strong>Nome:</strong> {aprovado.nome}</p>
             <p><strong>Sobrenome:</strong> {aprovado.sobrenome}</p>
             <p><strong>Telefone:</strong> {aprovado.telefone}</p>

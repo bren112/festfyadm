@@ -4,6 +4,7 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [totalArrecadado, setTotalArrecadado] = useState(0);
+  const [displayedValue, setDisplayedValue] = useState(0);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -28,8 +29,23 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
+    let current = 0;
+    const increment = totalArrecadado / 100; // Define um incremento gradual
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= totalArrecadado) {
+        current = totalArrecadado;
+        clearInterval(interval);
+      }
+      setDisplayedValue(current);
+    }, 10); // Atualiza o valor a cada 10ms para uma animação suave
+
+    return () => clearInterval(interval);
+  }, [totalArrecadado]);
+
+  useEffect(() => {
     const calculateCountdown = () => {
-      const targetDate = new Date('2024-10-05T21:00:00');
+      const targetDate = new Date('2024-12-28T21:00:00');
       const now = new Date();
       const timeDifference = targetDate - now;
 
@@ -52,7 +68,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <h1>Dashboard</h1>
+      {/* <h1 id='h1'>REVEILLON</h1> */}
       <div className="countdown-container">
         <div className="countdown-box">
           <span className="countdown-number">{countdown.days}</span>
@@ -72,9 +88,8 @@ const Dashboard = () => {
         </div>
       </div>
       <br/>
-      <p>Total Arrecadado:</p>
-      <h1 id='h1'>R$ {totalArrecadado.toFixed(2)}</h1>
-  
+      {/* <p>Total Arrecadado:</p> */}
+      <h1 id='h1'>R$ {displayedValue.toFixed(2)}</h1>
     </div>
   );
 };

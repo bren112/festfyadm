@@ -60,12 +60,12 @@ const Pagamentos = () => {
 
   return (
     <div className="table-container">
-      <h1>Aprovar</h1>
+      <h1 id='title'>Aprovar</h1>
       {/* Tabela para telas grandes */}
       <table className="table">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Número</th>
             <th>Nome</th>
             <th>Sobrenome</th>
             <th>Telefone</th>
@@ -75,9 +75,9 @@ const Pagamentos = () => {
           </tr>
         </thead>
         <tbody>
-          {pagamentos.map(pagamento => (
+          {pagamentos.map((pagamento, index) => (
             <tr key={pagamento.id}>
-              <td>{pagamento.id}</td>
+              <td>{index + 1}</td> {/* Exibe o número da linha */}
               <td>{pagamento.nome}</td>
               <td>{pagamento.sobrenome}</td>
               <td>{pagamento.telefone}</td>
@@ -106,9 +106,9 @@ const Pagamentos = () => {
 
       {/* Cartões para telas pequenas */}
       <div className="card-container">
-        {pagamentos.map(pagamento => (
+        {pagamentos.map((pagamento, index) => (
           <div className="card" key={pagamento.id}>
-            <h2>ID: {pagamento.id}</h2>
+            <h2>Número: {index + 1}</h2> {/* Exibe o número da linha */}
             <p><strong>Nome:</strong> {pagamento.nome}</p>
             <p><strong>Sobrenome:</strong> {pagamento.sobrenome}</p>
             <p><strong>Telefone:</strong> {pagamento.telefone}</p>
