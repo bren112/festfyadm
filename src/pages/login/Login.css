@@ -1,0 +1,87 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+  }
+  
+  .login-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #333;
+  }
+  
+  #input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  #input::placeholder {
+    color: #777;
+  }
+  
+  #input:focus {
+    border-color: #fff;
+  }
+  #title_home{
+    font-family: "Danfo", serif;
+    font-size: 4pc;
+  }
+  button {
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  
