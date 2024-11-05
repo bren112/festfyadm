@@ -19,3 +19,18 @@ link{
   text-decoration: none;
   
 }
+input{
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  background-color: #ffffff;
+  border: 2px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px; /* Define o tamanho fixo do texto para evitar zoom */
+  font-weight: 500;
+
+  outline: none;
+  transition: border-color 0.3s;
+  -webkit-text-size-adjust: 100%; /* Remove zoom em dispositivos móveis */
+}
