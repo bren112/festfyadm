@@ -7,7 +7,7 @@ import Aprovar from "./pages/aprovar/Aprovar";
 import Aprovados from "./pages/aprovados/Aprovados";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-
+import Teste from "./pages/Recado/Test";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -28,6 +28,10 @@ function App() {
             <Route
               path="/dashboard"
               element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/recado"
+              element={isAuthenticated ? <Teste /> : <Navigate to="/login" />}
             />
             <Route
               path="/aprovar"

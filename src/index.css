@@ -33,4 +33,5 @@ input{
   outline: none;
   transition: border-color 0.3s;
   -webkit-text-size-adjust: 100%; /* Remove zoom em dispositivos móveis */
+
 }
