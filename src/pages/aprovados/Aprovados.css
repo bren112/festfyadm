@@ -3,7 +3,9 @@
 .table-container {
     margin: 20px;
   }
-  
+  .search-input{
+    color: black;
+  } 
   /* Estilos para a tabela */
   .table {
     width: 100%;
